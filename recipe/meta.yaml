@@ -1,4 +1,4 @@
-{% set version = '0.6.0.3' %}
+{% set version = "0.6.0.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/osqp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/osqp/osqp_{{ version }}.tar.gz
-  sha256: 12d0d1f44deaf1657d9f769d56771e9da6cdd89445f8e37a245b7fc408b0c688
+  sha256: 9494152fb45d6937f6c48ea507a7238998e8b2ccdd1e039cf94b94a4c4a00f92
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -56,9 +56,7 @@ test:
 about:
   home: https://www.osqp.org
   license: Apache-2.0
-  summary: Provides bindings to the 'OSQP' solver. The 'OSQP' solver is a numerical optimization
-    package or solving convex quadratic programs written in 'C' and based on the alternating
-    direction method of multipliers. See <arXiv:1711.08013> for details.
+  summary: Provides bindings to the 'OSQP' solver. The 'OSQP' solver is a numerical optimization package or solving convex quadratic programs written in 'C' and based on the alternating direction method of multipliers. See <arXiv:1711.08013> for details.
   license_family: APACHE
   license_file:
     - APACHE-2.0.txt
