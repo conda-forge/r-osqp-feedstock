@@ -1,4 +1,4 @@
-{% set version = "0.6.0.4" %}
+{% set version = "0.6.0.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/osqp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/osqp/osqp_{{ version }}.tar.gz
-  sha256: 9494152fb45d6937f6c48ea507a7238998e8b2ccdd1e039cf94b94a4c4a00f92
+  sha256: 08fc69c8b0cd1710a46edfbb6f4cb86853abed42d5b7d0370a2f51b59d685ab6
 
 build:
   merge_build_host: true  # [win]
