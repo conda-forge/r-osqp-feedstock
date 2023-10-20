@@ -1,4 +1,4 @@
-{% set version = "0.6.3.1" %}
+{% set version = "0.6.3.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/osqp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/osqp/osqp_{{ version }}.tar.gz
-  sha256: 433265adae091202f90fb37e64013bb79d14c892392fc2b9005e4ae5c1de1b9d
+  sha256: 18543b329a42be0f419dff4aa42f4401c2afb18f46276ce359853494dd803244
 
 build:
   merge_build_host: true  # [win]
@@ -38,13 +38,13 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-matrix
+    - r-matrix >=1.6.1
     - r-r6
     - r-rcpp >=0.12.14
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-matrix
+    - r-matrix >=1.6.1
     - r-r6
     - r-rcpp >=0.12.14
 
@@ -60,6 +60,7 @@ about:
   license_family: APACHE
   license_file:
     - APACHE-2.0.txt
+    - LICENSE
 
 extra:
   recipe-maintainers:
