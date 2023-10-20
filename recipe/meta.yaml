@@ -38,13 +38,13 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-matrix
+    - r-matrix >=1.6.1
     - r-r6
     - r-rcpp >=0.12.14
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-matrix
+    - r-matrix >=1.6.1
     - r-r6
     - r-rcpp >=0.12.14
 
@@ -60,6 +60,7 @@ about:
   license_family: APACHE
   license_file:
     - APACHE-2.0.txt
+    - LICENSE
 
 extra:
   recipe-maintainers:
