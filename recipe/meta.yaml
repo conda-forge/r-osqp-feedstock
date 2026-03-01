@@ -1,4 +1,4 @@
-{% set version = "0.6.3.3" %}
+{% set version = "1.0.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/osqp_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/osqp/osqp_{{ version }}.tar.gz
-  sha256: ff3d8e4ec7764333144d461eb5ea7a4adbf5b5f29f84c3ec3e60a93802e2f5bb
+  sha256: 8c0534a4b4944acd5398e9c3e61dd161586e9f05f4ac4a45e57cfe5f03a548c8
 
 build:
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
