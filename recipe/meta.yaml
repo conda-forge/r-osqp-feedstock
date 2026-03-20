@@ -36,19 +36,25 @@ requirements:
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-cli                        # [build_platform != target_platform]
     - r-matrix >=1.6.1             # [build_platform != target_platform]
     - r-r6                         # [build_platform != target_platform]
     - r-rcpp >=0.12.14             # [build_platform != target_platform]
+    - r-s7                         # [build_platform != target_platform]
   host:
     - r-base
+    - r-cli
     - r-matrix >=1.6.1
     - r-r6
     - r-rcpp >=0.12.14
+    - r-s7
   run:
     - r-base
+    - r-cli
     - r-matrix >=1.6.1
     - r-r6
     - r-rcpp >=0.12.14
+    - r-s7
 
 test:
   commands:
